@@ -1,6 +1,7 @@
-var RandomNumber;
-var RandomNumber2;
-var quote=["Одно дерево еще не лес.",
+const quoteElement = document.getElementById("quote");
+let currentQuoteIndex;
+
+let quote = ["Одно дерево еще не лес.",
     "Красна весна цветами, осень - снопами.",
     "Весна да осень - на дню погод восемь.",
     "Весенний дождь растит, осенний гноит.",
@@ -15,16 +16,13 @@ var quote=["Одно дерево еще не лес.",
     "В октябре с солнцем распрощайся, ближе к печке подбирайся.",
     "В ноябре зима с осенью борется.",
     "Ноябрь - сентябрев внук, октябрев сын, зиме родной брат."];
-function random(){
-    while (true) {
-        RandomNumber2 = (Math.floor((Math.random() * (quote.length ))));
-        if(RandomNumber2 === RandomNumber){
-        }
-        else {
-            RandomNumber = RandomNumber2;
-            console.log(RandomNumber)
-            document.getElementById("text").innerHTML=quote[RandomNumber];
-            break;
-        }
+
+function generateNewQuote() {
+    let newRandom = generateRandomNumber(quote.length);
+
+    if (newRandom !== currentQuoteIndex) {
+        currentQuoteIndex = newRandom;
+        quoteElement.innerHTML = quote[currentQuoteIndex];
     }
+    else generateNewQuote();
 }

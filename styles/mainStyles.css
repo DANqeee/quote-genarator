@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=PMontserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    background: black;
+    background: linear-gradient(60deg, rgba(0, 0, 0, 1) 0%, rgba(112, 112, 112, 1) 46%, rgba(255, 255, 255, 1) 100%);
+}
+
+button {
+    background: transparent;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mainBox {
+    background: rgba(0, 0, 0, 0.45);
+    width: calc(100% - 100px);
+    height: 200px;
+    border-radius: 15px;
+    border: #343434 3px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    gap: 30px;
+}
+
+#quote {
+    border-bottom: 2px #ffffff solid;
+    color: #ececec;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.actionBox {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 32px;
+}
+
+.quoteGeneratorButton {
+    width: 140px;
+    height: 100%;
+    background: #ececec;
+    border-radius: 30px;
+}
+
+.copyButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.copyButton i {
+    color: #ffffff;
+    scale: 1.8;
+}
